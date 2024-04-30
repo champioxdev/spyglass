@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Spyglass v1.0-a @ Fullscreen</title>
+    <link href="style.css" rel="stylesheet">
+    <meta http-equiv="refresh" content="3">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div id="image-wrapper" class="image-wrapper"></div>
+        <script>
+            changeImageURL(localStorage.getItem("lastCamera"));
+        </script>
+        <div class="id-button-wrapper">
+            <div class="id-button"><img class="button-icon" src="../../assets/left.png" onclick="buttonEvent(-1)"></div>
+            <div class="id-button"><img class="button-icon" src="../../assets/right.png" onclick="buttonEvent(1)"></div>
+        </div>
+    </div>
+</body>
+</html>
