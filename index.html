@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Spyglass v1.2</title>
-    <link href="style.css" rel="stylesheet">
-    <script src="app.js"></script>
+    <link href="./style.css" rel="stylesheet">
+    <script src="./app.js"></script>
 </head>
 <body onload="setInterval(setImageURL(localStorage.getItem('lastCamera')), 250);">
     <div class="page-wrapper">
@@ -11,8 +11,8 @@
             <img id="preview" class="camera-preview" onerror="this.src = './assets/error.jpg'" />
         </div>
         <div class="id-button-wrapper">
-            <div class="id-button"><img class="button-icon" src="../../assets/left.png" onclick="buttonEvent(-1)"></div>
-            <div class="id-button"><img class="button-icon" src="../../assets/right.png" onclick="buttonEvent(1)"></div>
+            <div class="id-button"><img class="button-icon" src="./assets/left.png" onclick="buttonEvent(-1)"></div>
+            <div class="id-button"><img class="button-icon" src="./assets/right.png" onclick="buttonEvent(1)"></div>
         </div>
     </div>
 </body>
