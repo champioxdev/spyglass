@@ -1,8 +1,5 @@
-function changeImageURL(id) {
-    if (Number.parseInt(id) <= 0) {
-        id = "62"
-    }
-    document.getElementById("image-wrapper").innerHTML = '<img id="preview" class="camera-preview" src="https://www.mobil-potsdam.de/fileadmin/templates_webcams/get_image2.php?type=2&pic=' + id + '&re=57c42a04fbe2e90a798e223cb6d231a7" onerror="this.src = \'../../assets/error.jpg\'">';
+function setImageURL(id) {
+    document.getElementById("preview").src = 'https://www.mobil-potsdam.de/fileadmin/templates_webcams/get_image2.php?type=2&pic=' + id + '&re=57c42a04fbe2e90a798e223cb6d231a7&dummy=' + new Date().getTime();
 }
 function getID() {
     if (localStorage.getItem("lastCamera") == undefined) {
@@ -21,6 +18,6 @@ function getID() {
     return Number.parseInt(localStorage.getItem("lastCamera"));
 }
 function buttonEvent(change) {
-    changeImageURL(change + getID());
+    setImageURL(change + getID());
     localStorage.setItem("lastCamera", change + getID());
 }
