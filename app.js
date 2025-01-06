@@ -21,3 +21,10 @@ function buttonEvent(change) {
     setImageURL(change + getID());
     localStorage.setItem("lastCamera", change + getID());
 }
+function downloadCurrent() {
+    const link = document.getElementById("preview").src;
+    const downloadHandler = document.createElement("a");
+    downloadHandler.download = link;
+    downloadHandler.click();
+    document.removeChild(downloadHandler);
+}
