@@ -1,5 +1,5 @@
 function setImageURL(id) {
-    document.getElementById("preview").src = 'https://www.mobil-potsdam.de/fileadmin/templates_webcams/get_image2.php?type=2&pic=' + id + '&re=57c42a04fbe2e90a798e223cb6d231a7&dummy=' + new Date().getTime();
+    document.getElementById("preview").src = 'https://www.mobil-potsdam.de/fileadmin/templates_webcams/get_image2.php?type=2&pic=' + id + '&re=57c42a04fbe2e90a798e223cb6d231a7&dummy=' + parseInt(Math.floor(Math.random() * 2147483648));
 }
 function getID() {
     if (localStorage.getItem("lastCamera") == undefined) {

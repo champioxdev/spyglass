@@ -5,10 +5,10 @@
     <link href="./style.css" rel="stylesheet">
     <script src="./app.js"></script>
 </head>
-<body onload="setInterval(setImageURL(localStorage.getItem('lastCamera')), 250);">
+<body onload="setImageURL(localStorage.getItem('lastCamera'))">
     <div class="page-wrapper">
         <div id="image-wrapper" class="image-wrapper">
-            <img id="preview" class="camera-preview" onerror="this.src = './assets/error.jpg'" />
+            <img onload="setInterval(setImageURL(localStorage.getItem('lastCamera')), 1000);" id="preview" class="camera-preview" onerror="this.src = './assets/error.jpg'" />
         </div>
         <div class="id-button-wrapper">
             <div class="id-button"><img class="button-icon" src="./assets/left.png" onclick="buttonEvent(-1)"></div>
